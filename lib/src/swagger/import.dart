@@ -76,7 +76,6 @@ class APIDocumentable {
 
 /// Represents an OpenAPI specification.
 class APIDocument {
-
   /// Provides metadata about the API
   APIInfo info = new APIInfo();
 

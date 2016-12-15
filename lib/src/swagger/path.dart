@@ -2,7 +2,6 @@ part of jaguar.src.console.swagger;
 
 /// Represents a path (also known as a route) in the OpenAPI specification.
 class APIPath {
-
   String path;
 
   String summary = "";

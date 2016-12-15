@@ -36,7 +36,7 @@ class APIParameter {
     m["name"] = name;
     m["description"] = description;
     m["required"] =
-    (parameterLocation == APIParameterLocation.path ? true : required);
+        (parameterLocation == APIParameterLocation.path ? true : required);
     m["deprecated"] = deprecated;
     m["schema"] = schemaObject?.asMap();
     m["in"] = parameterLocationStringForType(parameterLocation);
