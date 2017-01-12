@@ -12,3 +12,5 @@ environment:
 
 dev_dependencies:
   test: '>=0.12.0 <0.13.0'
+  yamlicious:
+    path: ../yamlicious

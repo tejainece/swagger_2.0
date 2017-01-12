@@ -4,6 +4,7 @@ import 'dart:mirrors';
 
 //TODO import 'dart:html';
 import 'dart:io';
+import 'dart:collection';
 
 part 'api_info.dart';
 part 'api_operation.dart';
@@ -97,13 +98,14 @@ class APIDocument {
   Map<String, APISecurityScheme> securitySchemes = {};
 
   Map<String, dynamic> asMap({String version: "2.0"}) {
-    var m = <String, dynamic>{};
+    final m = new LinkedHashMap<String, dynamic>();
 
     if (version.startsWith("2.")) {
       m["swagger"] = version;
     } else {
       m["openapi"] = version;
     }
+
     m["info"] = info.asMap();
 
     if (version.startsWith("2.")) {
