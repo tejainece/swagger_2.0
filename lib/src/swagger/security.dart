@@ -83,7 +83,7 @@ class APISecurityScheme {
       /* nothing to do */
     } else if (type == "apiKey") {
       m["name"] = apiKeyName;
-      m["in"] = APIParameter.parameterLocationStringForType(apiKeyLocation);
+      m["in"] = parameterLocationStringForType(apiKeyLocation);
     } else if (type == "oauth2") {
       m["flow"] = stringForFlow(oauthFlow);
 

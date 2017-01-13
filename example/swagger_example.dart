@@ -7,7 +7,8 @@ import 'package:yamlicious/yamlicious.dart';
 
 main(List<String> args) {
   APIDocument doc = new APIDocument();
-  doc.info.description = "Example API to swagger generation capabilities of Jaguar-dart";
+  doc.info.description =
+      "Example API to swagger generation capabilities of Jaguar-dart";
   doc.info.title = "Sample swagger generation";
   doc.info.termsOfServiceURL = "All rights reserved!";
   doc.info.contact.email = "tejaience@gmail.com";
@@ -35,8 +36,9 @@ main(List<String> args) {
     op.consumes.add(ContentType.JSON);
     op.produces.add(ContentType.JSON);
     {
-      APIParameter param = new APIParameter();
+      APIParameterInlined param = new APIParameterInlined();
       param.name = "id";
+      param.type = APISchemaObject.TypeInteger;
       param.parameterLocation = APIParameterLocation.path;
       op.parameters.add(param);
     }
